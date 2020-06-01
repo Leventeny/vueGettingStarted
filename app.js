@@ -26,9 +26,11 @@ var app4 = new Vue({
     el: '#app-4',
     data: {
         todos: [
-            { text: 'Learn js'},
-            { text: 'Learn Vue'},
-            { text: 'Build something awesome'}
+            { text: 'GettingStarted Guide'},
+            { text: 'VueBook'},
+            { text: '2 youtube vids'},
+            { text: 'Vue learning vids'},
+            { text: 'CS50 courses'}
         ]
     }
 })
@@ -49,5 +51,21 @@ var app6 = new Vue({
     el: '#app-6',
     data: {
         message: 'Hello Vuejs!'
+    }
+})
+
+Vue.component('todo-item', {
+    props: ['todo'],
+    template: '<li>{{ todo.text }}</li>'
+})
+
+var app7 = new Vue({
+    el: '#app-7',
+    data: {
+        groceryList: [
+            { id: 0, text: 'Veges'},
+            { id: 1, text: 'Cheese'},
+            { id: 2, text: 'Whateva'}
+        ]
     }
 })
